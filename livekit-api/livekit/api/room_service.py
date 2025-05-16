@@ -184,12 +184,15 @@ class RoomService(Service):
         self, remove: RoomParticipantIdentity
     ) -> RemoveParticipantResponse:
         """Removes a participant from a room.
-
         Args:
-            remove (RoomParticipantIdentity): arg containing:
+            remove (RoomParticipantIdentity): Object containing:
                 - room: str - Room name
                 - identity: str - Identity of participant to remove
-
+            ex- RoomParticipantIdentity(
+                room="my-room-name",
+                identity="participant-identity-to-remove"
+            )
+            (Import from: livekit.protocol.room import RoomParticipantIdentity)
         Returns:
             RemoveParticipantResponse: Empty response object
         """
